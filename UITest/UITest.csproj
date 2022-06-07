@@ -1,0 +1,152 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{2A9D2EA9-3DC1-41BB-BC61-9AC2E63A4B41}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>UITest</RootNamespace>
+    <AssemblyName>UITest</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EnvDTE, Version=8.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Syncfusion.Core.WinForms, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Data.WinForms, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grid.Base, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Grid.Windows, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.GridCommon.WinForms, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SfDataGrid.WinForms, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="Syncfusion.SfInput.WinForms, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SfListView.WinForms, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Base, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Shared.Windows, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.SpellChecker.Base, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Tools.Base, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89" />
+    <Reference Include="Syncfusion.Tools.Windows, Version=18.4460.0.30, Culture=neutral, PublicKeyToken=3d67ed1f87d44c89, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Form1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form1.Designer.cs">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="Form1.resx">
+      <DependentUpon>Form1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Imagenes\Add-New-24px.png" />
+    <Content Include="Imagenes\Add-New-28px.png" />
+    <Content Include="Imagenes\add_18px.png" />
+    <Content Include="Imagenes\add_24px.png" />
+    <Content Include="Imagenes\archivo-png.png" />
+    <Content Include="Imagenes\calendar_plus_28px.png" />
+    <Content Include="Imagenes\Camera-01.png" />
+    <Content Include="Imagenes\Cancel-32px.png" />
+    <Content Include="Imagenes\Cancel-black-32px.png" />
+    <Content Include="Imagenes\cancel_28px - copia.png" />
+    <Content Include="Imagenes\cancel_28px.png" />
+    <Content Include="Imagenes\clients.png" />
+    <Content Include="Imagenes\edit_12px.png" />
+    <Content Include="Imagenes\edit_18px.png" />
+    <Content Include="Imagenes\edit_file_28px.png" />
+    <Content Include="Imagenes\exit_28px.png" />
+    <Content Include="Imagenes\factura.png" />
+    <Content Include="Imagenes\Heart_24px.png" />
+    <Content Include="Imagenes\image_file_12px.png" />
+    <Content Include="Imagenes\image_file_18px.png" />
+    <Content Include="Imagenes\image_file_20px.png" />
+    <Content Include="Imagenes\image_file_22px.png" />
+    <Content Include="Imagenes\lungs_24px.png" />
+    <Content Include="Imagenes\masa-corporal-24px.png" />
+    <Content Include="Imagenes\Menu Interface-WF.png" />
+    <Content Include="Imagenes\orden %281%29.png" />
+    <Content Include="Imagenes\orden %282%29.png" />
+    <Content Include="Imagenes\orden %283%29.png" />
+    <Content Include="Imagenes\orden.png" />
+    <Content Include="Imagenes\Patient-02-WF-32px.png" />
+    <Content Include="Imagenes\Patient-02-WF.png" />
+    <Content Include="Imagenes\pdf_24px.png" />
+    <Content Include="Imagenes\prescripcion-medica.png" />
+    <Content Include="Imagenes\pulse_24px.png" />
+    <Content Include="Imagenes\refresh_28px.png" />
+    <Content Include="Imagenes\Save-01-32px.png" />
+    <Content Include="Imagenes\Save-01.png" />
+    <Content Include="Imagenes\save_24px.png" />
+    <Content Include="Imagenes\save_28px.png" />
+    <Content Include="Imagenes\save_32px.png" />
+    <Content Include="Imagenes\scale-24px.png" />
+    <Content Include="Imagenes\scale.png" />
+    <Content Include="Imagenes\shoe.png" />
+    <Content Include="Imagenes\signo-de-dolar.png" />
+    <Content Include="Imagenes\straight_ruler_18px.png" />
+    <Content Include="Imagenes\straight_ruler_24px.png" />
+    <Content Include="Imagenes\thermometer_24px.png" />
+    <Content Include="Imagenes\trash_18px.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
